@@ -4,14 +4,15 @@ const fs = require("fs");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+//Make sure paths are correct
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 
 
 app.use(express.static('public'));
-// parse incoming string or array data
+// parse string or array data
 app.use(express.urlencoded({extended: true}));
-// parse incoming JSON data
+// parse JSON data
 app.use(express.json());
 
 
